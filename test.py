@@ -1,6 +1,5 @@
 from tools.tools import *
 
-from lxml import etree
 from os import listdir
 from os.path import isfile, join
 
