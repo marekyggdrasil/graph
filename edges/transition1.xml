@@ -1,0 +1,13 @@
+<inference type="apply">
+  <source>vert1</source>
+  <target>vert2</target>
+  <apply>
+    <math>
+      <apply>
+        <plus/>
+        <ci>eq</ci>
+        <ci>D</ci>
+      </apply>
+    </math>
+  </apply>
+</inference>

@@ -1,0 +1,20 @@
+<vertex>
+  <lhs>
+    <math>
+      <apply>
+        <plus/>
+        <ci>C</ci>
+        <ci>D</ci>
+      </apply>
+    </math>
+  </lhs>
+  <rhs>
+    <math>
+      <apply>
+        <plus/>
+        <ci>E</ci>
+        <ci>D</ci>
+      </apply>
+    </math>
+  </rhs>
+</vertex>
