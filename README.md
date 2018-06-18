@@ -11,17 +11,22 @@ There are four vertices in the graph and two edges. Vertices 1-3 are simple deri
 
 To check correctness run
 
-`python test.py`
+`python -m unittest -v tests.graph tests.parsing`
 
-Expected output
+Expected something like following as an output
 
 ```
-* parsing edge transition1.xml...  OK
-  LHS after inference rule...  OK
-  RHS after inference rule...  OK
-* parsing edge transition2.xml...  OK
-  LHS after inference rule...  OK
-  RHS after inference rule...  OK
+testApply (tests.graph.GraphTest) ... ok
+testParsing (tests.graph.GraphTest) ... ok
+testSubstitute (tests.graph.GraphTest) ... ok
+testAddition (tests.parsing.ParsingTest) ... ok
+testMultiplication (tests.parsing.ParsingTest) ... ok
+testSubtraction (tests.parsing.ParsingTest) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.110s
+
+OK
 ```
 
 To see the initial (hardcoded) example run
