@@ -1,0 +1,26 @@
+<vertices>
+  <vertex id="soi">
+    <lhs>
+      Integral(f1(x) + f2(x), x)
+    </lhs>
+    <rhs>
+      Integral(f1(x), x) + Integral(f2(x), x)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Sum of Integrals</desc>
+      <comment lang="en_EN">Sum of integrals is equivalent to integral of sums.</comment>
+    </meta>
+  </vertex>
+  <vertex id="doi">
+    <lhs>
+      Integral(f1(x) - f2(x), x)
+    </lhs>
+    <rhs>
+      Integral(f1(x), x) - Integral(f2(x), x)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Difference of Integrals</desc>
+      <comment lang="en_EN">Difference of integrals is equivalent to integral of difference.</comment>
+    </meta>
+  </vertex>
+</vertices>

@@ -1,0 +1,27 @@
+<edges>
+  <inference id="ftc1" type="implication">
+    <if>
+      <prop what="f" is="continuous" from="a" to="b"></prop>
+      <vertex>vftc1_1</vertex>
+    </if>
+    <then>
+      <vertex>vftc1_2</vertex>
+    </then>
+    <meta>
+      <desc lang="en_EN">Fundamental Theorem of Calculus I</desc>
+    </meta>
+  </inference>
+  <inference id="ftc2" type="implication">
+    <if>
+      <prop what="f" is="continuous" from="a" to="b"></prop>
+    </if>
+    <then>
+      <vertex>vftc2_1</vertex>
+      <vertex>vftc2_2</vertex>
+    </then>
+    <meta>
+      <desc lang="en_EN">Fundamental Theorem of Calculus II</desc>
+      <desc lang="en_EN">Newton–Leibniz axiom</desc>
+    </meta>
+  </inference>
+</edges>

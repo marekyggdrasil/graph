@@ -1,0 +1,138 @@
+<vertices>
+  <vertex id="vEL1">
+    <lhs>
+      S(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t)
+    </lhs>
+    <rhs>
+      Integral(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), (t, t1, t2))
+    </rhs>
+  </vertex>
+  <vertex id="vEL2">
+    <lhs>
+      Derivative(S(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(Integral(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), (t, t1, t2)), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="vEL3">
+    <lhs>
+      delta(S(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t)))
+    </lhs>
+    <rhs>
+      Derivative(Integral(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), (t, t1, t2)), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="vEL4">
+    <lhs>
+      0
+    </lhs>
+    <rhs>
+      Derivative(Integral(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), (t, t1, t2)), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="vEL5">
+    <lhs>
+      Derivative(Integral(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), (t, t1, t2)), epsilon)
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL6">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon), (t, t1, t2))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL7">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), q(t))*n(t)+Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*nd(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL8">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), q(t))*n(t), (t, t1, t2))+Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*nd(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL9">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), q(t))*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      - Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*nd(t), (t, t1, t2))
+    </rhs>
+  </vertex>
+  <vertex id="vEL10">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), q(t))*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      Subs(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), t, t2) - Subs(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), t, t1) - Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t), (t, t1, t2))
+    </rhs>
+  </vertex>
+  <vertex id="vEL11">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), q(t))*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      - Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t), (t, t1, t2))
+    </rhs>
+  </vertex>
+  <vertex id="vEL12">
+    <lhs>
+      - Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      - Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), (t, t1, t2))
+    </rhs>
+  </vertex>
+  <vertex id="vEL13">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), (t, t1, t2))
+    </rhs>
+  </vertex>
+  <vertex id="vEL14">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t), (t, t1, t2)) - Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL15">
+    <lhs>
+      Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t) - Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL16">
+    <lhs>
+      Integral((Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t) - Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t)))*n(t), (t, t1, t2))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vEL17">
+    <lhs>
+      Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t) - Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+</vertices>

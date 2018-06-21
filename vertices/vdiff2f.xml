@@ -1,0 +1,18 @@
+<vertices>
+  <vertex id="vdiff2f">
+    <lhs>
+      d(epsilon)
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vprodinfinites">
+    <lhs>
+      c
+    </lhs>
+    <rhs>
+      a*b
+    </rhs>
+  </vertex>
+</vertices>

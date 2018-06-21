@@ -1,0 +1,15 @@
+<edges>
+  <inference id="iod1" type="deduce" implication="ftc2">
+    <given>
+      <prop what="f" is="continuous"></prop>
+    </given>
+    <target>viod1<target>
+  </inference>
+  <inference id="iod2" type="deduce" implication="nssmptn3">
+    <given>
+      <prop what="f" is="continuous"></prop>
+      <prop what="c" is="constant" ></noassumption></prop>
+    </given>
+    <target>viod2<target>
+  </inference>
+</edges>

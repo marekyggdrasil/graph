@@ -1,0 +1,26 @@
+<edges>
+  <inference id="d2form" type="implication">
+    <if>
+      <prop what="epsilon" is="infinitesimal"></prop>
+    </if>
+    <then>
+      <vertex>vdiff2f</vertex>
+    </then>
+    <meta>
+      <desc lang="en_EN">Differential 2-form</desc>
+    </meta>
+  </inference>
+  <inference id="prodinfinites" type="implication">
+    <if>
+      <prop what="a" is="infinitesimal"></prop>
+      <prop what="b" isnot="infinitesimal"></prop>
+      <vertex>vprodinfinites</vertex>
+    </if>
+    <then>
+      <prop what="c" is="infinitesimal"></prop>
+    </then>
+    <meta>
+      <desc lang="en_EN">Product of infinitesimal quantities is infinitesimal</desc>
+    </meta>
+  </inference>
+</edges>

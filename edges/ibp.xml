@@ -1,0 +1,35 @@
+<edges>
+  <inference id="ibp1" type="apply" operation="integration" wrt="x">
+    <source>vproductrule</source>
+    <target>vibp1</target>
+  </inference>
+  <inference id="ibp2" type="substitute">
+    <source>vibp1</source>
+    <target>vibp2</target>
+    <using vertex="soi" source_side="rhs" vertex_side="lhs">
+      <map>
+        <key>f1(x)*Derivative(f2(x), x)</key>
+        <value>f1(x)</value>
+      </map>
+      <map>
+        <key>f2(x)*Derivative(f1(x), x)</key>
+        <value>f2(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="ibp3" type="substitute">
+    <source>vibp2</source>
+    <target>vibp3</target>
+    <using vertex="viod" source_side="lhs" vertex_side="rhs">
+      <map>
+        <key>f1(x)*f2(x)</key>
+        <value>f(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="ibp4" type="apply" operation="subtraction">
+    <source>vibp3</source>
+    <target>vibp4</target>
+    <quantity>Integral(f1(x)*Derivative(f2(x), x))</quantity>
+  </inference>
+</edges>

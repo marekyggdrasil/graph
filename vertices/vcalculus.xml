@@ -1,0 +1,85 @@
+<vertices>
+  <vertex id="sumrule">
+    <lhs>
+      Derivative(f(x) + g(x), x)
+    </lhs>
+    <rhs>
+      Derivative(f(x), x) + Derivative(g(x), x)
+    </rhs>
+  </vertex>
+  <vertex id="differencerule">
+    <lhs>
+      Derivative(f(x) - g(x), x)
+    </lhs>
+    <rhs>
+      Derivative(f(x), x) - Derivative(g(x), x)
+    </rhs>
+  </vertex>
+  <vertex id="subsprop">
+    <lhs>
+      Subs(Derivative(f(a, b), a), b, v)
+    </lhs>
+    <rhs>
+      Derivative(Subs(f(a, b), b, v), a)
+    </rhs>
+  </vertex>
+  <vertex id="chainrule">
+    <lhs>
+      Derivative(f(f1(t), f2(t), f3(t)), t)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t), f2(t), f3(t)), f1(t))*Derivative(f1(t), t)+Derivative(f(f1(t), f2(t), f3(t)), f2(t))*Derivative(f2(t), t)+Derivative(f(f1(t), f2(t), f3(t)), t)*Derivative(f3(t), t)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Chain rule</desc>
+    </meta>
+  </vertex>
+  <vertex id="vproductrule">
+    <lhs>
+      Derivative(f1(x)*f2(x), x)
+    </lhs>
+    <rhs>
+      f1(x)*Derivative(f2(x), x) + f2(x)*Derivative(f1(x), x)
+    </rhs>
+  </vertex>
+  <vertex id="vconstantrule">
+    <lhs>
+      Derivative(c, x)
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vmultbyconstantrule">
+    <lhs>
+      Derivative(c*f(x), x)
+    </lhs>
+    <rhs>
+      c*Derivative(f(x), x)
+    </rhs>
+  </vertex>
+  <vertex id="vpowerrule">
+    <lhs>
+      Derivative(x**n, x)
+    </lhs>
+    <rhs>
+      n*x**(n-1)
+    </rhs>
+  </vertex>
+  <vertex id="vlinerule">
+    <lhs> TOTO: derive it using power rule
+      Derivative(x, x)
+    </lhs>
+    <rhs>
+      1
+    </rhs>
+  </vertex>
+  <vertex id="vdiff_sum">
+    <lhs>
+      d(f(x) + g(x))
+    </lhs>
+    <rhs>
+      d(f(x)) + d(g(x))
+    </rhs>
+  </vertex>
+</vertices>

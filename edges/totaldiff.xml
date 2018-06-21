@@ -1,0 +1,275 @@
+<edges>
+  <inference id="etotaldiff1" type="apply" operation="differentiatiation" wrt="epsilon">
+    <source>totaldiff1</source>
+    <target>totaldiff1p</target>
+  </inference>
+  <inference id="etotaldiff2" type="substitute">
+    <source>totaldiff1p</source>
+    <target>totaldiff2</target>
+    <using vertex="chainrule" source_side="rhs" vertex_side="lhs">
+    </using>
+  </inference>
+  <inference id="etotaldiff3" type="vanish">
+    <source>totaldiff2</source>
+    <target>totaldiff3</target>
+    <using vertex="totaldiffsupp1" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(t, epsilon)
+      </match>
+    </using>
+  </inference>
+  <inference id="etotaldiff4" type="substitute">
+    <source>totaldiff3</source>
+    <target>totaldiff4</target>
+    <using vertex="totaldiffsupp2_3" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(f2(t, epsilon), epsilon)
+      </match>
+    </using>
+  </inference>
+  <inference id="etotaldiff5" type="substitute_differential">
+    <source>totaldiff4</source>
+    <target>totaldiff5</target>
+    <using vertex="totaldiffsupp3_3" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f2(t, epsilon))
+      </match>
+    </using>
+  </inference>
+  <inference id="etotaldiff6" type="substitute">
+    <source>totaldiff5</source>
+    <target>totaldiff6</target>
+    <using vertex="totaldiffsupp4_3" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(f1(t, epsilon), epsilon)
+      </match>
+    </using>
+  </inference>
+  <inference id="etotaldiff7" type="substitute_differential">
+    <source>totaldiff6</source>
+    <target>totaldiff</target>
+    <using vertex="totaldiffsupp5_3" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t, epsilon))
+      </match>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp2_1" type="substitute">
+    <source>totaldiffsupp2_1</source>
+    <target>totaldiffsupp2_2</target>
+    <using vertex="sumrule" source_side="rhs" vertex_side="rhs">
+      <map>
+        <key>qd(t)</key>
+        <value>f(x)</value>
+      </map>
+      <map>
+        <key>epsilon*nd(t)</key>
+        <value>g(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp2_2" type="substitute">
+    <source>totaldiffsupp2_2</source>
+    <target>totaldiffsupp2_2_1</target>
+    <using vertex="vmultbyconstantrule" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(epsilon*nd(t), epsilon)
+      </match>
+      <map>
+        <key>epsilon</key>
+        <value>f(x)</value>
+      </map>
+      <map>
+        <key>nd(t)</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp2_3" type="substitute">
+    <source>totaldiffsupp2_2_1</source>
+    <target>totaldiffsupp2_2_2</target>
+    <using vertex="vmultbyconstantrule" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(qd(t), epsilon)
+      </match>
+      <map>
+        <key>qd(t)</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp2_4" type="substitute">
+    <source>totaldiffsupp2_2_2</source>
+    <target>totaldiffsupp2_3</target>
+    <using vertex="vlinerule" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(epsilon, epsilon)
+      </match>
+      <map>
+        <key>epsilon</key>
+        <value>x</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp3_1" type="substitute">
+    <source>totaldiffsupp3_1</source>
+    <target>totaldiffsupp3_2</target>
+    <using vertex="vdiffsum" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(epsilon, epsilon)
+      </match>
+      <map>
+        <key>qd(t)</key>
+        <value>f(x)</value>
+      </map>
+      <map>
+        <key>epsilon*nd(t)</key>
+        <value>g(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp3_2" type="deduce_property">
+    <source>totaldiffsupp3_2</source>
+    <target>totaldiffsupp3_2_1</target>
+    <using implication="prodinfinites">
+      <match>
+        epsilon*nd(t)
+      </match>
+      <map>
+        <key>epsilon</key>
+        <value>a</value>
+      </map>
+      <map>
+        <key>nd(t)</key>
+        <value>b</value>
+      </map>
+      <map>
+        <key>epsilon*nd(t)</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp3_3" type="substitute_implied">
+    <source>totaldiffsupp3_2_1</source>
+    <target>totaldiffsupp3_3</target>
+    <match>
+      <source>
+        d(epsilon*nd(t))
+      </source>
+      <using implication="d2form">
+        <map>
+          <key>epsilon*nd(t)</key>
+          <value>epsilon</value>
+        </map>
+      </using>
+  </inference>
+  <inference id="etotaldiffsupp4_1" type="substitute">
+    <source>totaldiffsupp4_1</source>
+    <target>totaldiffsupp4_2</target>
+    <using vertex="sumrule" source_side="rhs" vertex_side="rhs">
+      <map>
+        <key>q(t)</key>
+        <value>f(x)</value>
+      </map>
+      <map>
+        <key>epsilon*n(t)</key>
+        <value>g(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp4_2" type="substitute">
+    <source>totaldiffsupp4_2</source>
+    <target>totaldiffsupp4_2_1</target>
+    <using vertex="vmultbyconstantrule" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(epsilon*n(t), epsilon)
+      </match>
+      <map>
+        <key>epsilon</key>
+        <value>f(x)</value>
+      </map>
+      <map>
+        <key>n(t)</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp4_3" type="substitute">
+    <source>totaldiffsupp4_2_1</source>
+    <target>totaldiffsupp4_2_2</target>
+    <using vertex="vmultbyconstantrule" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(q(t), epsilon)
+      </match>
+      <map>
+        <key>q(t)</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp4_4" type="substitute">
+    <source>totaldiffsupp4_2_2</source>
+    <target>totaldiffsupp4_3</target>
+    <using vertex="vlinerule" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(epsilon, epsilon)
+      </match>
+      <map>
+        <key>epsilon</key>
+        <value>x</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp5_1" type="substitute">
+    <source>totaldiffsupp5_1</source>
+    <target>totaldiffsupp5_2</target>
+    <using vertex="vdiffsum" source_side="rhs" vertex_side="rhs">
+      <match>
+        Derivative(epsilon, epsilon)
+      </match>
+      <map>
+        <key>q(t)</key>
+        <value>f(x)</value>
+      </map>
+      <map>
+        <key>epsilon*n(t)</key>
+        <value>g(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp5_2" type="deduce_property">
+    <source>totaldiffsupp5_2</source>
+    <target>totaldiffsupp5_2_1</target>
+    <using implication="prodinfinites">
+      <match>
+        epsilon*n(t)
+      </match>
+      <map>
+        <key>epsilon</key>
+        <value>a</value>
+      </map>
+      <map>
+        <key>n(t)</key>
+        <value>b</value>
+      </map>
+      <map>
+        <key>epsilon*n(t)</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="etotaldiffsupp5_3" type="substitute_implied">
+    <source>totaldiffsupp5_2_1</source>
+    <target>totaldiffsupp5_3</target>
+    <match>
+      <source>
+        d(epsilon*n(t))
+      </source>
+      <using implication="d2form">
+        <map>
+          <key>epsilon*n(t)</key>
+          <value>epsilon</value>
+        </map>
+      </using>
+  </inference>
+</edges>

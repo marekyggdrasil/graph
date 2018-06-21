@@ -1,0 +1,11 @@
+<vertex id="variation">
+  <lhs>
+    delta(S(f(t, epsilon)))
+  </lhs>
+  <rhs>
+    Derivative(S(f(t, epsilon)), epsilon)
+  </rhs>
+  <meta>
+    <desc lang="en_EN">variation</desc>
+  </meta>
+</vertex>

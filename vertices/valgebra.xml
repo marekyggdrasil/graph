@@ -1,0 +1,24 @@
+<vertices>
+  <vertex id="distributivity">
+    <lhs>
+      a*(b + c)
+    </lhs>
+    <rhs>
+      a*b + a*c
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Distributive property of a sum</desc>
+    </meta>
+  </vertex>
+  <vertex id="distributivity2">
+    <lhs>
+      a*(b - c)
+    </lhs>
+    <rhs>
+      a*b - a*c
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Distributive property of difference</desc>
+    </meta>
+  </vertex>
+</vertices>

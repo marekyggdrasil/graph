@@ -1,0 +1,21 @@
+<vertices>
+  <vertex id="viod1">
+    <prop what="c" is="constant" ></noassumption></prop>
+    <lhs>
+      Integral(Derivative(f(x), x), x)
+    </lhs>
+    <rhs>
+      f(x) + c
+    </rhs>
+    <desc lang="en_EN">Integral of derivative of function is equal to that function up to a constant</desc>
+  </vertex>
+  <vertex id="viod2">
+    <lhs>
+      Integral(Derivative(f(x), x), x)
+    </lhs>
+    <rhs>
+      f(x)
+    </rhs>
+    <desc lang="en_EN">In presence of integral, constant vanishes</desc>
+  </vertex>
+</vertices>

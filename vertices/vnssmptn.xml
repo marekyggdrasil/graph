@@ -1,0 +1,56 @@
+<vertices>
+  <vertex id="vnssmptn1">
+    <prop what="c1" is="constant" ></noassumption></prop>
+    <prop what="c2" is="constant" ></noassumption></prop>
+    <lhs>
+      f(x) + c1
+    </lhs>
+    <rhs>
+      g(x) + c2
+    </rhs>
+  </vertex>
+  <vertex id="vnssmptn2">
+    <prop what="c3" is="constant" ></noassumption></prop>
+    <lhs>
+      f(x)
+    </lhs>
+    <rhs>
+      g(x) + c3
+    </rhs>
+  </vertex>
+  <vertex id="vnssmptn3">
+    <prop what="c1" is="constant" ></noassumption></prop>
+    <lhs>
+      f(x) + c1
+    </lhs>
+    <rhs>
+      g(x)
+    </rhs>
+  </vertex>
+  <vertex id="vnssmptn4">
+    <prop what="c2" is="constant" ></noassumption></prop>
+    <lhs>
+      f(x)
+    </lhs>
+    <rhs>
+      g(x) + c2
+    </rhs>
+  </vertex>
+  <vertex id="vnssmptn5">
+    <prop what="c1" is="constant" ></noassumption></prop>
+    <lhs>
+      f(x) + c1
+    </lhs>
+    <rhs>
+      g(x) + Integral(h(x), x)
+    </rhs>
+  </vertex>
+  <vertex id="vnssmptn6">
+    <lhs>
+      f(x)
+    </lhs>
+    <rhs>
+      g(x) + Integral(h(x), x)
+    </rhs>
+  </vertex>
+</vertices>

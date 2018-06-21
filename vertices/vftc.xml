@@ -1,0 +1,34 @@
+<vertices>
+  <vertex id="vftc1_1">
+    <lhs>
+      Integral(f(x), x)
+    </lhs>
+    <rhs>
+      F(x)
+    </rhs>
+  </vertex>
+  <vertex id="vftc1_2">
+    <lhs>
+      Integral(f(x), (x, a, b))
+    </lhs>
+    <rhs>
+      Subs(F(x), x, b) - Subs(F(x), x, a)
+    </rhs>
+  </vertex>
+  <vertex id="vftc2_1">
+    <lhs>
+      Integral(f(t), (t, a, x))
+    </lhs>
+    <rhs>
+      F(x)
+    </rhs>
+  </vertex>
+  <vertex id="vftc2_2">
+    <lhs>
+      Derivative(F(x), x)
+    </lhs>
+    <rhs>
+      f(x)
+    </rhs>
+  </vertex>
+</vertices>

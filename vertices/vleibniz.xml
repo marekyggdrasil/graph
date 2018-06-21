@@ -1,0 +1,42 @@
+<vertices>
+  <vertex id="leibniz">
+    <lhs>
+      Derivative(Integral(f(a, b), b), a)
+    </lhs>
+    <rhs>
+      Integral(Derivative(f(a, b), a), b)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Leibniz rule</desc>
+      <desc lang="en_EN">interchangeability of integration and differentiation</desc>
+    </meta>
+  </vertex>
+  <vertex id="dleibniz1">
+    <lhs>
+      Subs(Derivative(Integral(f(a, b), b), a), b, t2) - Subs(Derivative(Integral(f(a, b), b), a), b, t1)
+    </lhs>
+    <rhs>
+      Subs(Integral(Derivative(f(a, b), a), b), b, t2) - Subs(Integral(Derivative(f(a, b), a), b), b, t1)
+    </rhs>
+  </vertex>
+  <vertex id="dleibniz2">
+    <lhs>
+      Derivative(Subs(Integral(f(a, b), b), b, t2) - Subs(Integral(f(a, b), b), b, t1), a)
+    </lhs>
+    <rhs>
+      Subs(Integral(Derivative(f(a, b), a), b), b, t2) - Subs(Integral(Derivative(f(a, b), a), b), b, t1)
+    </rhs>
+  </vertex>
+  <vertex id="dleibniz">
+    <lhs>
+      Derivative(Integral(f(a, b), (b, t1, t2)), a)
+    </lhs>
+    <rhs>
+      Integral(Derivative(f(a, b), a), (b, t1, t2))
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Leibniz rule with definite integral</desc>
+      <desc lang="en_EN">interchangeability of definite integral and differentiation</desc>
+    </meta>
+  </vertex>
+</vertices>

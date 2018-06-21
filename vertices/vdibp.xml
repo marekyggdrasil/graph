@@ -1,0 +1,22 @@
+<vertices>
+  <vertex id="vdibp1">
+    <lhs>
+      Subs(f1(x)*f2(x), x, b) - Subs(f1(x)*f2(x), x, a) + Subs(Integral(f1(x)*Derivative(f2(x), x)), x, b) - Subs(Integral(f1(x)*Derivative(f2(x), x)), x, a)
+    </lhs>
+    <rhs>
+      Subs(Integral(f2(x)*Derivative(f1(x), x), x), x, b) - Subs(Integral(f2(x)*Derivative(f1(x), x), x), x, a)
+    </rhs>
+  </vertex>
+  <vertex id="vdibp2">
+    <lhs>
+      Subs(f1(x)*f2(x), x, b) - Subs(f1(x)*f2(x), x, a) - Integral(f1(x)*Derivative(f2(x), x), (x, a, b))
+    </lhs>
+    <rhs>
+      Integral(f2(x)*Derivative(f1(x), x), (x, a, b))
+    </rhs>
+    <meta>
+      <desc lang="en_EN">integration by parts with definite integrals</desc>
+      <desc lang="en_EN">partial integration with definite integrals</desc>
+    </meta>
+  </vertex>
+</vertices>

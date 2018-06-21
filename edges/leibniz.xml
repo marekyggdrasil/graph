@@ -1,0 +1,41 @@
+<edges>
+  <inference id="eleibniz1" type="apply" operation="evaluation" from="a" to="b">
+    <source>leibniz</source>
+    <target>dleibniz1</target>
+  </inference>
+  <inference id="eleibniz2" type="substitute">
+    <source>dleibniz1</source>
+    <target>dleibniz2</target>
+    <using vertex="subsprop" source_side="both" vertex_side="rhs">
+      <match>
+        Subs(Derivative(Integral(f(a, b), b), a), b, _)
+      </match>
+      <map>
+        <key>Integral(f(a, b), b)</key>
+        <value>f(a, b)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="eleibniz3" type="substitute_implied">
+    <source>dleibniz2</source>
+    <target>dleibniz</target>
+    <match>
+      <source>
+        Subs(Integral(f(a, b), b), b, t2) - Subs(Integral(f(a, b), b), b, t1)
+      </source>
+      <target>
+        Integral(f(a, b), b), (b, t1, t2))
+      </target>
+      <using implication="ftc1">
+        <map>
+          <key>Subs(Integral(f(a, b), b), b, t2)</key>
+          <value>Subs(F(x), x, b)</value>
+        </map>
+        <map>
+          <key>Subs(Integral(f(a, b), b), b, t1)</key>
+          <value>Subs(F(x), x, a)</value>
+        </map>
+      </using>
+    </match>
+  </inference>
+</edges>

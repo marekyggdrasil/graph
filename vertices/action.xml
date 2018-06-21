@@ -1,0 +1,11 @@
+<vertex id="action">
+  <lhs>
+    S(f(t))
+  </lhs>
+  <rhs>
+    Integral(L(f(t), t), (t, t1, t2))
+  </rhs>
+  <meta>
+    <desc lang="en_EN">variation</desc>
+  </meta>
+</vertex>

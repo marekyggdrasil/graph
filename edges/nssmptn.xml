@@ -1,0 +1,41 @@
+<edges>
+  <inference id="nssmptn1" type="implication">
+    <if>
+      <prop what="c1" is="constant" ></noassumption></prop>
+      <prop what="c2" is="constant" ></noassumption></prop>
+      <vertex>vnssmptn1</vertex>
+    </if>
+    <then>
+      <prop what="c3" is="constant" ></noassumption></prop>
+      <vertex>vnssmptn1/vertex>
+    </then>
+    <meta>
+      <desc lang="en_EN">Gathering integration constants</desc>
+    </meta>
+  </inference>
+  <inference id="nssmptn2" type="implication">
+    <if>
+      <prop what="c1" is="constant" ></noassumption></prop>
+      <vertex>vnssmptn3</vertex>
+    </if>
+    <then>
+      <prop what="c2" is="constant" ></noassumption></prop>
+      <vertex>vnssmptn4</vertex>
+    </then>
+    <meta>
+      <desc lang="en_EN">Sign of integration constant doesn\'t matter</desc>
+    </meta>
+  </inference>
+  <inference id="nssmptn3" type="implication">
+    <if>
+      <prop what="c1" is="constant" ></noassumption></prop>
+      <vertex>vnssmptn5</vertex>
+    </if>
+    <then>
+      <vertex>vnssmptn6</vertex>
+    </then>
+    <meta>
+      <desc lang="en_EN">Integration constant vanishes in presence of integral</desc>
+    </meta>
+  </inference>
+</edges>

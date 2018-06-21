@@ -1,0 +1,18 @@
+<vertices>
+  <vertex id="vflcv1">
+    <lhs>
+      Integral(f(t)*h(t), (x, a, b))
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="vflcv2">
+    <lhs>
+      f(t)
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+</vertices>

@@ -1,0 +1,11 @@
+<vertex id="pla">
+  <lhs>
+    delta(S(f(t, epsilon)))
+  </lhs>
+  <rhs>
+    0
+  </rhs>
+  <meta>
+    <desc lang="en_EN">principle of least action</desc>
+  </meta>
+</vertex>

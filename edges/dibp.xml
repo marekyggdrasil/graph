@@ -1,0 +1,28 @@
+<edges>
+  <inference id="dibp1" type="apply" operation="evaluation" from="a" to="b">
+    <source>vibp4</source>
+    <target>vdibp1</target>
+  </inference>
+  <inference id="dibp2" type="substitute_implied">
+    <source>vdibp1</source>
+    <target>vdibp2</target>
+    <match>
+      <source>
+        Subs(Integral(f1(x)*Derivative(f2(x), x)), x, b) - Subs(Integral(f1(x)*Derivative(f2(x), x)), x, a)
+      </source>
+      <target>
+        Integral(f1(x)*Derivative(f2(x), x), (x, a, b))
+      </target>
+      <using implication="ftc1">
+        <map>
+          <key>Subs(Integral(f1(x)*Derivative(f2(x), x)), x, b)</key>
+          <value>Subs(F(x), x, b)</value>
+        </map>
+        <map>
+          <key>Subs(Integral(f1(x)*Derivative(f2(x), x)), x, a)</key>
+          <value>Subs(F(x), x, a)</value>
+        </map>
+      </using>
+    </match>
+  </inference>
+</edges>

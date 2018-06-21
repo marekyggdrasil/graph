@@ -1,0 +1,222 @@
+<vertices>
+  <vertex id="totaldiff1" type="definition">
+    <lhs>
+      f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t)
+    </lhs>
+    <rhs>
+      f(f1(t, epsilon), f2(t, epsilon), t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff1p">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff2">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t, epsilon))*Derivative(f1(t, epsilon), epsilon)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f2(t, epsilon))*Derivative(f2(t, epsilon), epsilon)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), t)*Derivative(t, epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff3">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t, epsilon))*Derivative(f1(t, epsilon), epsilon)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f2(t, epsilon))*Derivative(f2(t, epsilon), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff4">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t, epsilon))*Derivative(f1(t, epsilon), epsilon)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f2(t, epsilon))*nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff5">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t))*Derivative(f1(t, epsilon), epsilon)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), qd(t))*nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff6">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t, epsilon))*n(t)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), qd(t))*nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiff">
+    <lhs>
+      Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(f(f1(t, epsilon), f2(t, epsilon), t), q(t))*n(t)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), qd(t))*nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp1">
+    <lhs>
+      Derivative(t, epsilon)
+    </lhs>
+    <rhs>
+      0
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp2_1" type="definition">
+    <lhs>
+      Derivative(f2(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(qd(t) + epsilon*nd(t), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp2_2">
+    <lhs>
+      Derivative(f2(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(qd(t), epsilon) + Derivative(epsilon*nd(t), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp2_2_1">
+    <lhs>
+      Derivative(f2(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(qd(t), epsilon) + Derivative(epsilon, epsilon)*nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp2_2_2">
+    <lhs>
+      Derivative(f2(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(epsilon, epsilon)*nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp2_3">
+    <lhs>
+      Derivative(f2(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      nd(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp3_1" type="definition">
+    <prop what="epsilon" is="infinitesimal"></prop>
+    <lhs>
+      d*(f2(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(qd(t) + epsilon*nd(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp3_2">
+    <prop what="epsilon" is="infinitesimal"></prop>
+    <lhs>
+      d*(f2(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(qd(t)) + d(epsilon*nd(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp3_2_1">
+    <prop is="infinitesimal">epsilon*nd(t)</prop>
+    <lhs>
+      d*(f2(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(qd(t)) + d(epsilon*nd(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp3_3">
+    <lhs>
+      d*(f2(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(qd(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp4_1" type="definition">
+    <lhs>
+      Derivative(f1(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(q(t) + epsilon*n(t), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp4_2">
+    <lhs>
+      Derivative(f1(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(q(t), epsilon) + Derivative(epsilon*n(t), epsilon)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp4_2_1">
+    <lhs>
+      Derivative(f1(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(d(t), epsilon) + Derivative(epsilon, epsilon)*n(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp4_2_2">
+    <lhs>
+      Derivative(f1(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      Derivative(epsilon, epsilon)*n(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp4_3">
+    <lhs>
+      Derivative(f1(t, epsilon), epsilon)
+    </lhs>
+    <rhs>
+      n(t)
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp5_1" type="definition">
+    <lhs>
+      d*(f1(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(q(t) + epsilon*n(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp5_2">
+    <lhs>
+      d*(f1(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(q(t)) + d(epsilon*n(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp5_2_1">
+    <prop is="infinitesimal">epsilon*n(t)</prop>
+    <lhs>
+      d*(f1(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(q(t)) + d(epsilon*n(t))
+    </rhs>
+  </vertex>
+  <vertex id="totaldiffsupp5_3">
+    <lhs>
+      d*(f1(t, epsilon))
+    </lhs>
+    <rhs>
+      d*(q(t))
+    </rhs>
+  </vertex>
+</vertices>

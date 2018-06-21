@@ -1,0 +1,35 @@
+<vertices>
+  <vertex id="timeder1">
+    <lhs>
+      qd(t)
+    </lhs>
+    <rhs>
+      Derivative(q(t), t)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">First time derivative</desc>
+    </meta>
+  </vertex>
+  <vertex id="timeder2">
+    <lhs>
+      qdd(t)
+    </lhs>
+    <rhs>
+      Derivative(qd(t), t)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Second time derivative</desc>
+    </meta>
+  </vertex>
+  <vertex id="timeder2">
+    <lhs>
+      qdd(t)
+    </lhs>
+    <rhs>
+      Derivative(qd(t), t)
+    </rhs>
+    <meta>
+      <desc lang="en_EN">Second time derivative</desc>
+    </meta>
+  </vertex>
+</vertices>

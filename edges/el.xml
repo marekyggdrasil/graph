@@ -1,0 +1,193 @@
+<edges>
+  <inference id="el1" type="substitute_from">
+    <source>action</source>
+    <target>vEL1</target>
+    <map>
+      <key>q(t) + epsilon*n(t), qd(t) + epsilon*nd(t)</key>
+      <value>f(x)</value>
+    </map>
+  </inference>
+  <inference id="el2" type="apply" operation="differentiatiation" wrt="epsilon">
+    <source>vEL1</source>
+    <target>vEL2</target>
+  </inference>
+  <inference id="el3" type="substitute">
+    <source>vEL2</source>
+    <target>vEL3</target>
+    <using vertex="variation" source_side="lhs" vertex_side="lhs">
+      <map>
+        <key>q(t) + epsilon*n(t), qd(t) + epsilon*nd(t)</key>
+        <value>f(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el4" type="substitute">
+    <source>vEL3</source>
+    <target>vEL4</target>
+    <using vertex="pla" source_side="lhs" vertex_side="rhs">
+      <map>
+        <key>q(t) + epsilon*n(t), qd(t) + epsilon*nd(t)</key>
+        <value>f(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el5" type="swap">
+    <source>vEL4</source>
+    <target>vEL5</target>
+  </inference>
+  <inference id="el6" type="substitute">
+    <source>vEL5</source>
+    <target>vEL6</target>
+    <using vertex="dleibniz" source_side="lhs" vertex_side="rhs">
+      <map>
+        <key>q(t) + epsilon*n(t), qd(t) + epsilon*nd(t)</key>
+        <value>f(a, b)</value>
+      </map>
+      <map>
+        <key>epsilon</key>
+        <value>a</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el7">
+    <source>vEL6</source>
+    <target>vEL7</target>
+    <using vertex="totaldiff" source_side="lhs" vertex_side="rhs">
+      <match>
+        Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+      </match>
+      <map>
+        <key>L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t)</key>
+        <value>f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el8" type="substitute">
+    <source>vEL7</source>
+    <target>vEL8</target>
+    <using vertex="soi" source_side="lhs" vertex_side="lhs">
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), q(t))*n(t)</key>
+        <value>f1(x)</value>
+      </map>
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*nd(t)</key>
+        <value>f2(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el9" type="apply" operation="subtraction">
+    <source>vEL8</source>
+    <target>vEL9</target>
+    <quantity>Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*nd(t), (t, t1, t2))</quantity>
+  </inference>
+  <inference id="el10" type="substitute">
+    <source>vEL9</source>
+    <target>vEL10</target>
+    <using vertex="vdibp2" source_side="rhs" vertex_side="lhs">
+      <match>
+        Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
+      </match>
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))</key>
+        <value>f1(x)</value>
+      </map>
+      <map>
+        <key>n(t)</key>
+        <value>f2(x)</value>
+      </map>
+      <map>
+        <key>t1</key>
+        <value>a</value>
+      </map>
+      <map>
+        <key>t2</key>
+        <value>b</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el11" type="assign">
+    <source>vEL10</source>
+    <target>vEL11</target>
+    <assignment>
+      <map>
+        <key>n(t1)</key>
+        <value>0</value>
+      </map>
+      <map>
+        <key>n(t2)</key>
+        <value>0</value>
+      </map>
+    </assignment>
+    <meta>
+      <desc lang="en_EN">Evaluated product vanishes at the boundaries</desc>
+    </meta>
+  </inference>
+  <inference id="el12" type="substitute">
+    <source>vEL9</source>
+    <target>vEL12</target>
+    <using vertex="el11" source_side="lhs" vertex_side="rhs">
+    </using>
+  </inference>
+  <inference id="el13" type="apply" operation="multiplication">
+    <source>vEL12</source>
+    <target>vEL13</target>
+    <quantity>-1</quantity>
+  </inference>
+  <inference id="el14" type="apply" operation="subtraction">
+    <source>vEL13</source>
+    <target>vEL14</target>
+    <quantity>Integral(Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t), (t, t1, t2))</quantity>
+  </inference>
+  <inference id="el15" type="substitute">
+    <source>vEL14</source>
+    <target>vEL15</target>
+    <using vertex="doi" source_side="lhs" vertex_side="lhs">
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)*n(t)</key>
+        <value>f1(x)</value>
+      </map>
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))*n(t)</key>
+        <value>f2(x)</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el16" type="substitute">
+    <source>vEL15</source>
+    <target>vEL16</target>
+    <using vertex="distributivity2" source_side="lhs" vertex_side="lhs">
+      <map>
+        <key>n(t)</key>
+        <value>a</value>
+      </map>
+      <map>
+        <key>Integral((Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t)</key>
+        <value>b</value>
+      </map>
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))</key>
+        <value>c</value>
+      </map>
+    </using>
+  </inference>
+  <inference id="el16" type="deduce" implication="flcv">
+    <using vertex="vEL16">
+      <map>
+        <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t) - Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))</key>
+        <value>f</value>
+      </map>
+      <map>
+        <key>n(t)</key>
+        <value>h</value>
+      </map>
+    </match>
+    <given>
+      <prop what="h" is="compact_support" from="t1" to="t2"></prop>
+      <prop what="h" is="smooth" from="t1" to="t2"></prop>
+      <prop what="f" is="continuous" from="t1" to="t2"></prop>
+      <vertex>vEL16</vertex>
+    </given>
+    <target>vEL17<target>
+  </inference>
+</edges>
