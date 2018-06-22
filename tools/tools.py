@@ -3,6 +3,12 @@ from ContentMathML import mml2sympy
 from lxml import etree
 from sympy import Symbol, simplify, sympify, simplify
 
+from os import listdir
+from os.path import isfile, join
+
+def listDirectory(path) :
+    return [f for f in listdir(path) if isfile(join(path, f))]
+
 def parseFile(path) :
     with open(path, 'r') as file :
         xml = file.read()
