@@ -1,7 +1,7 @@
 <vertices>
   <vertex id="vnssmptn1">
-    <prop what="c1" is="constant" ></noassumption></prop>
-    <prop what="c2" is="constant" ></noassumption></prop>
+    <prop what="c1" is="constant" ><noassumption /></prop>
+    <prop what="c2" is="constant" ><noassumption /></prop>
     <lhs>
       f(x) + c1
     </lhs>
@@ -10,7 +10,7 @@
     </rhs>
   </vertex>
   <vertex id="vnssmptn2">
-    <prop what="c3" is="constant" ></noassumption></prop>
+    <prop what="c3" is="constant" ><noassumption /></prop>
     <lhs>
       f(x)
     </lhs>
@@ -19,7 +19,7 @@
     </rhs>
   </vertex>
   <vertex id="vnssmptn3">
-    <prop what="c1" is="constant" ></noassumption></prop>
+    <prop what="c1" is="constant" ><noassumption /></prop>
     <lhs>
       f(x) + c1
     </lhs>
@@ -28,7 +28,7 @@
     </rhs>
   </vertex>
   <vertex id="vnssmptn4">
-    <prop what="c2" is="constant" ></noassumption></prop>
+    <prop what="c2" is="constant" ><noassumption /></prop>
     <lhs>
       f(x)
     </lhs>
@@ -37,7 +37,7 @@
     </rhs>
   </vertex>
   <vertex id="vnssmptn5">
-    <prop what="c1" is="constant" ></noassumption></prop>
+    <prop what="c1" is="constant" ><noassumption /></prop>
     <lhs>
       f(x) + c1
     </lhs>
