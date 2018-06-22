@@ -162,6 +162,7 @@
           <value>epsilon</value>
         </map>
       </using>
+    </match>
   </inference>
   <inference id="etotaldiffsupp4_1" type="substitute">
     <source>totaldiffsupp4_1</source>
@@ -271,5 +272,6 @@
           <value>epsilon</value>
         </map>
       </using>
+    </match>
   </inference>
 </edges>
