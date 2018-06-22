@@ -15,3 +15,12 @@ for edge in edges :
                 parsed = parseFile(path)
             except Exception as error :
                 self.fail('failed to parse edges/' + edge + ': ' + str(error))
+
+for vertex in vertices :
+    class GraphTest(unittest.TestCase):
+        def testComplete(self) :
+            path = 'vertices/' + vertex
+            try:
+                parsed = parseFile(path)
+            except Exception as error :
+                self.fail('failed to parse vertices/' + vertex + ': ' + str(error))
