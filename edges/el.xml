@@ -49,7 +49,7 @@
       </map>
     </using>
   </inference>
-  <inference id="el7">
+  <inference id="el7" type="substitute">
     <source>vEL6</source>
     <target>vEL7</target>
     <using vertex="totaldiff" source_side="lhs" vertex_side="rhs">
