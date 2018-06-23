@@ -172,7 +172,7 @@
     </using>
   </inference>
   <inference id="el16" type="deduce" implication="flcv">
-    <using vertex="vEL16">
+    <match vertex="vEL16">
       <map>
         <key>Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t) - Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))</key>
         <value>f</value>
@@ -188,6 +188,6 @@
       <prop what="f" is="continuous" from="t1" to="t2"></prop>
       <vertex>vEL16</vertex>
     </given>
-    <target>vEL17<target>
+    <target>vEL17</target>
   </inference>
 </edges>

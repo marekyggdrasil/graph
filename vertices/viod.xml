@@ -1,6 +1,6 @@
 <vertices>
   <vertex id="viod1">
-    <prop what="c" is="constant" ></noassumption></prop>
+    <prop what="c" is="constant" ><noassumption /></prop>
     <lhs>
       Integral(Derivative(f(x), x), x)
     </lhs>
