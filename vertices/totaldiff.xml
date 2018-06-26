@@ -55,7 +55,7 @@
       Derivative(f(f1(t, epsilon), f2(t, epsilon), t), f1(t, epsilon))*n(t)+Derivative(f(f1(t, epsilon), f2(t, epsilon), t), qd(t))*nd(t)
     </rhs>
   </vertex>
-  <vertex id="totaldiff">
+  <vertex id="totaldiff" type="derivable">
     <lhs>
       Derivative(f(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), epsilon)
     </lhs>

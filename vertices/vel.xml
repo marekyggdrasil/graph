@@ -127,7 +127,7 @@
       0
     </rhs>
   </vertex>
-  <vertex id="vEL17">
+  <vertex id="vEL17" type="derivable">
     <lhs>
       Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t), t) - Derivative(L(q(t) + epsilon*n(t), qd(t) + epsilon*nd(t), t), qd(t))
     </lhs>

@@ -1,4 +1,4 @@
-<vertex id="pla">
+<vertex id="pla" type="definition">
   <lhs>
     delta(S(f(t, epsilon)))
   </lhs>

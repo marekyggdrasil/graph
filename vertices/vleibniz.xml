@@ -27,7 +27,7 @@
       Subs(Integral(Derivative(f(a, b), a), b), b, t2) - Subs(Integral(Derivative(f(a, b), a), b), b, t1)
     </rhs>
   </vertex>
-  <vertex id="dleibniz">
+  <vertex id="dleibniz" type="derivable">
     <lhs>
       Derivative(Integral(f(a, b), (b, t1, t2)), a)
     </lhs>

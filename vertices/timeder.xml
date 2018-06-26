@@ -1,5 +1,5 @@
 <vertices>
-  <vertex id="timeder1">
+  <vertex id="timeder1" type="definition">
     <lhs>
       qd(t)
     </lhs>
@@ -10,7 +10,7 @@
       <desc lang="en_EN">First time derivative</desc>
     </meta>
   </vertex>
-  <vertex id="timeder2">
+  <vertex id="timeder2" type="definition">
     <lhs>
       qdd(t)
     </lhs>
@@ -21,7 +21,7 @@
       <desc lang="en_EN">Second time derivative</desc>
     </meta>
   </vertex>
-  <vertex id="timeder2">
+  <vertex id="timeder2" type="definition">
     <lhs>
       qdd(t)
     </lhs>

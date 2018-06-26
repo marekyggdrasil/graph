@@ -1,4 +1,4 @@
-<vertex id="action">
+<vertex id="action" type="definition">
   <lhs>
     S(f(t))
   </lhs>

@@ -7,7 +7,7 @@
       Subs(Integral(f2(x)*Derivative(f1(x), x), x), x, b) - Subs(Integral(f2(x)*Derivative(f1(x), x), x), x, a)
     </rhs>
   </vertex>
-  <vertex id="vdibp2">
+  <vertex id="vdibp2" type="derivable">
     <lhs>
       Subs(f1(x)*f2(x), x, b) - Subs(f1(x)*f2(x), x, a) - Integral(f1(x)*Derivative(f2(x), x), (x, a, b))
     </lhs>
